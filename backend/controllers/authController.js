@@ -39,6 +39,14 @@ export const register = async (req, res) => {
             VALUES (?, ?, ?, ?)`,
             [name, email, password, role]
         );
+// 
+        // console.log('INSERT ID:', result.insertId);
+
+        // const [checkUsers] = await connection.query(
+        //     'SELECT * FROM users'
+        // );
+
+        // console.log('Users in backend connection:', checkUsers);
 
         res.status(201).json({
             message: 'User registered successfully.',

@@ -91,15 +91,46 @@ VALUES (
         '5:55'
     );
 
+-- SELECT DATABASE();
+
+-- SELECT @@port;
 USE ggtune;
 
 SELECT * FROM users;
 
 SELECT * FROM songs;
 
+USE ggtune;
+
+SELECT
+    id,
+    name,
+    email,
+    role,
+    created_at
+FROM users
+ORDER BY id DESC;
 
 
+USE ggtune;
 
+-- SELECT * 
+-- FROM users
+-- WHERE id = 6;
+
+
+-- SELECT COUNT(*) AS total_users
+-- FROM users;
+
+-- SELECT MAX(id) AS highest_id
+-- FROM users;
 
 
 DROP DATABASE IF EXISTS ggtune;
+
+
+
+SELECT
+    @@hostname AS hostname,
+    @@port AS port,
+    @@datadir AS data_directory;
